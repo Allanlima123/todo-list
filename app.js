@@ -1,7 +1,7 @@
 'use strict';
 
-import { getBanco, setBanco } from 'src/pegardados/getset.js';
-import { criarItem } from 'src/print/screen.js';
+import { getBanco, setBanco } from './src/pegardados/getset.js';
+import { criarItem } from './src/print/screen.js';
 
 //3 a ser criado
 const LimparTarefas = () =>{
@@ -26,7 +26,6 @@ const inserirItem = evento =>{
     const texto = evento.target.value;
     if(tecla === "Enter"){
         const banco = getBanco();
-        console.log(banco)
         banco.push(
             {'tarefa' : texto,'status' : ''}
         );
